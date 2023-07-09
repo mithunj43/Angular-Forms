@@ -4,8 +4,10 @@
 
         <div class="form-group">
             <label for="name">Name</label>
-            <input id="name" name="name" class="form-control" [(ngModel)]="userSettings.name" required pattern="B.*" minLength="3">
+            <input id="name" name="name" class="form-control" [(ngModel)]="userSettings.name" required #classTest>
         </div>
+
+        <h3>{{classTest.className}}</h3>
 
         <div class="form-check form-group">
             <input class="form-check-input" type="checkbox" value="" id="emailoffers" name="emailoffers" [(ngModel)]="userSettings.emailOffers">
