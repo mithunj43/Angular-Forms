@@ -9,7 +9,7 @@ import { UserSettings } from '../data/user-settings';
 export class UserSettingsFormComponent {
 
   orginialUserSettings: UserSettings = {
-    name: 'Pooja Mithun',
+    name: '',
     emailOffers: true,
     interfaceStyles: 'dark',
     subscriptionType: 'Annual',
