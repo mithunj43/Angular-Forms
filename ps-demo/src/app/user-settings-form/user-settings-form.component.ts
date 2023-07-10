@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NgForm } from '@angular/forms';
 import { UserSettings } from '../data/user-settings';
 
 @Component({
@@ -17,5 +18,9 @@ export class UserSettingsFormComponent {
   };
 
   userSettings: UserSettings = { ...this.orginialUserSettings };
+
+  onSubmit(form: NgForm): void {
+    console.log('in OnSubmit: ',form.valid);
+  }
 
 }
