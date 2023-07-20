@@ -22,6 +22,8 @@ export class UserSettingsFormComponent implements OnInit{
     notes: null
   };
 
+  singleModel = "On";
+
   subscriptionTypes!: Observable<string[]>;
   userSettings: UserSettings = { ...this.orginialUserSettings };
 
@@ -30,10 +32,10 @@ export class UserSettingsFormComponent implements OnInit{
   }
   onSubmit(form: NgForm): void {
     console.log('in OnSubmit: ',form.value);
-    this.dataService.postUserSettingsForm(this.userSettings).subscribe(
-      result => console.log('result',result),
-      error => console.log('error',error)
-      );
+    // this.dataService.postUserSettingsForm(this.userSettings).subscribe(
+    //   result => console.log('result',result),
+    //   error => console.log('error',error)
+    //   );
   }
 
   onBlur(field: NgModel):void{
