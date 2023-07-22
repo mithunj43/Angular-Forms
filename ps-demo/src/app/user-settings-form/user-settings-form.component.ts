@@ -1,3 +1,4 @@
+import { Time } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { NgForm, NgModel } from '@angular/forms';
 import { Observable } from 'rxjs';
@@ -24,6 +25,7 @@ export class UserSettingsFormComponent implements OnInit{
 
   singleModel = "On";
   startDate!: Date;
+  startTime: Date = new Date();
 
   subscriptionTypes!: Observable<string[]>;
   userSettings: UserSettings = { ...this.orginialUserSettings };
