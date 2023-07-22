@@ -26,7 +26,9 @@ export class UserSettingsFormComponent implements OnInit{
   singleModel = "On";
   startDate!: Date;
   startTime: Date = new Date();
-
+  maxRating = 10;
+  userRating = 0;
+  isReadonly = false;
   subscriptionTypes!: Observable<string[]>;
   userSettings: UserSettings = { ...this.orginialUserSettings };
 

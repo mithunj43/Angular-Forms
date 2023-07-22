@@ -15,13 +15,22 @@
             <label for="startDate">Start Date</label>
             <input type="text" placeholder="Start Date" class="form-control" bsDaterangepicker name="startDate" id="startDate" [(ngModel)]="startDate">
         </div>
+        Start Date: {{startDate}}
+
+        <div class="form-group">
+            User Rating
+            <rating [(ngModel)]="userRating" [max]="maxRating" [readonly]="isReadonly"
+            name="userRating" id="userRating"
+            [titles]="['one','two','three']"></rating>
+        </div>
+
+        User Rating: {{userRating}}
 
         <div class="form-group">
             <label for="startTime">Start Time</label>
             <timepicker [(ngModel)]="startTime" name="startTime" id="startTime"></timepicker>
         </div>
 
-        Start Date: {{startDate}}
         <button type="button" class="btn btn-primary" [(ngModel)]="singleModel" btnCheckbox btnCheckboxTrue="On"
             name="singleModel" btnCheckboxFalse="Off">
             {{ singleModel }}
