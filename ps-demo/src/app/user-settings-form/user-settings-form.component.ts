@@ -23,12 +23,14 @@ export class UserSettingsFormComponent implements OnInit{
   };
 
   singleModel = "On";
+  startDate!: Date;
 
   subscriptionTypes!: Observable<string[]>;
   userSettings: UserSettings = { ...this.orginialUserSettings };
 
   ngOnInit(): void {
     this.subscriptionTypes = this.dataService.getSubscriptionTypes();
+    this.startDate = new Date();
   }
   onSubmit(form: NgForm): void {
     console.log('in OnSubmit: ',form.value);

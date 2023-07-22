@@ -11,6 +11,12 @@
             </div>
         </div>
 
+        <div class="form-group">
+            <label for="startDate">Start Date</label>
+            <input type="text" placeholder="Start Date" class="form-control" bsDaterangepicker name="startDate" id="startDate" [(ngModel)]="startDate">
+        </div>
+
+        Start Date: {{startDate}}
         <button type="button" class="btn btn-primary" [(ngModel)]="singleModel" btnCheckbox btnCheckboxTrue="On"
             name="singleModel" btnCheckboxFalse="Off">
             {{ singleModel }}
@@ -50,12 +56,12 @@
 
             <div class="btn-group">
                 <label class="btn btn-primary" [(ngModel)]="userSettings.interfaceStyles" name="interfaceStyles"
-                       btnRadio="Light" tabindex="0" role="button">Light</label>
+                    btnRadio="Light" tabindex="0" role="button">Light</label>
                 <label class="btn btn-primary" [(ngModel)]="userSettings.interfaceStyles" name="interfaceStyles"
-                       btnRadio="Medium" tabindex="0" role="button">Medium</label>
+                    btnRadio="Medium" tabindex="0" role="button">Medium</label>
                 <label class="btn btn-primary" [(ngModel)]="userSettings.interfaceStyles" name="interfaceStyles"
-                       btnRadio="Dark" tabindex="0" role="button">Dark</label>
-              </div>
+                    btnRadio="Dark" tabindex="0" role="button">Dark</label>
+            </div>
         </div>
 
         <div class="form-group">
